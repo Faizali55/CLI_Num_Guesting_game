@@ -12,7 +12,7 @@ while (loop) {
         },
     ]);
     if (answer.userguestnumber === randomNumber) {
-        console.log("\nCongratulation ! You Guest A Correct Number>");
+        console.log("\nCongratulation ! You Guest A Correct Number.\n");
     }
     else {
         console.log("\nSorry,You Guess A Wrong Number.\n");
@@ -21,7 +21,7 @@ while (loop) {
         type: "confirm",
         name: "more",
         message: "Do You Want To More Guesting?",
-        default: false
+        default: false,
     });
     if (!GuestingMore.more) {
         loop = false;

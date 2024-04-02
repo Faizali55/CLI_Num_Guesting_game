@@ -19,3 +19,4 @@ if (answer.userguestnumber === randomNumber) {
 } else {
   console.log("\nSorry,You Guess A Wrong Number.");
 }
+console.log("\nThank You")

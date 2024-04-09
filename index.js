@@ -1,8 +1,9 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
+import chalk from "chalk";
 let loop = true;
 while (loop) {
-    console.log("\n\twellcome to codewithfaiz-CLI Number Guesting Game\n");
+    console.log(chalk.blueBright.bold("\n\t <<<<<< wellcome to codewithfaiz-CLI Number Guesting Game >>>>>> \n"));
     const randomNumber = Math.floor(Math.random() * 6 + 1);
     const answer = await inquirer.prompt([
         {
@@ -12,10 +13,10 @@ while (loop) {
         },
     ]);
     if (answer.userguestnumber === randomNumber) {
-        console.log("\nCongratulation ! You Guest A Correct Number.\n");
+        console.log(chalk.green("\nCongratulation ! You Guest A Correct Number.\n"));
     }
     else {
-        console.log("\nSorry,You Guess A Wrong Number.\n");
+        console.log(chalk.red("\nSorry,You Guess A Wrong Number.\n"));
     }
     const GuestingMore = await inquirer.prompt({
         type: "confirm",
@@ -25,6 +26,6 @@ while (loop) {
     });
     if (!GuestingMore.more) {
         loop = false;
-        console.log("\nThank You");
+        console.log(chalk.yellow("\nThank You"));
     }
 }

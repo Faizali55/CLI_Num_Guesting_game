@@ -1,15 +1,15 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
+console.log(chalk.blueBright.bold("\n\t <<<<<< wellcome to codewithfaiz-CLI Number Guesting Game >>>>>> \n"));
 let loop = true;
 while (loop) {
-    console.log(chalk.blueBright.bold("\n\t <<<<<< wellcome to codewithfaiz-CLI Number Guesting Game >>>>>> \n"));
     const randomNumber = Math.floor(Math.random() * 6 + 1);
     const answer = await inquirer.prompt([
         {
             name: "userguestnumber",
             type: "number",
-            message: "Enter Your Guess Number(Number limit from 1 to 6):",
+            message: "Enter Your Guest Number(Number limit from 1 to 6):",
         },
     ]);
     if (answer.userguestnumber === randomNumber) {

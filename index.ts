@@ -10,14 +10,14 @@ console.log(
     let loop = true;
 
 while (loop) {
-  
+
   const randomNumber = Math.floor(Math.random() * 6 + 1);
 
   const answer = await inquirer.prompt([
     {
       name: "userguestnumber",
       type: "number",
-      message: "Enter Your Guess Number(Number limit from 1 to 6):",
+      message: "Enter Your Guest Number(Number limit from 1 to 6):",
     },
   ]);
 

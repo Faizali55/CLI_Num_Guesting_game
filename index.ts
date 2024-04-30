@@ -3,15 +3,14 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-let loop = true;
+console.log(
+  chalk.blueBright.bold(
+    "\n\t <<<<<< wellcome to codewithfaiz-CLI Number Guesting Game >>>>>> \n"));
+
+    let loop = true;
 
 while (loop) {
-  console.log(
-    chalk.blueBright.bold(
-      "\n\t <<<<<< wellcome to codewithfaiz-CLI Number Guesting Game >>>>>> \n"
-    )
-  );
-
+  
   const randomNumber = Math.floor(Math.random() * 6 + 1);
 
   const answer = await inquirer.prompt([
